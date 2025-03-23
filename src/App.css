@@ -1,0 +1,172 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #d6e4f0; /* Color base */
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s ease;
+  width: 100%;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  margin-top: 20px; /* Espaciado entre bloques */
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+
+
+
+h2 {
+  margin-bottom: 15px;
+  color: #1565c0;
+}
+
+/* Selector de país */
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #1565c0;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Input */
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #1565c0;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+
+
+
+
+.city-name {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0d47a1;
+  margin-bottom: 10px;
+}
+
+.temp {
+  font-size: 40px;
+  font-weight: bold;
+  color: #ff6f00;
+  margin: 10px 0;
+}
+
+.temp-max-min {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.description {
+  font-size: 18px;
+  font-style: italic;
+  color: #424242;
+  margin-top: 5px;
+}
+
+/* Icono del clima */
+.icon {
+  width: 100px;
+  height: 100px;
+  margin: 10px 0;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .temp {
+    font-size: 35px;
+  }
+}
+
+/* Switch para cambiar unidades */
+.unit-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1565c0;
+}
+
+.unit-toggle span {
+  margin: 0 10px;
+}
+
+/* Estilo del switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #1565c0;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
